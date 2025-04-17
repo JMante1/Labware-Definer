@@ -10,7 +10,7 @@ def GenerateXML(fileName) :
     b1 = ET.SubElement(m1, "brand") 
     b1.text = "Redmi"
     b2 = ET.SubElement(m1, "price") 
-    b2.text = "6999"
+    b2.text = "6990"
 
     print (root)
 
