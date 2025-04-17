@@ -1,0 +1,54 @@
+<html>
+   <style>
+      .red-button {
+          background-color: red;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+  
+      .red-button:hover {
+          background-color: darkred;
+      }
+  </style>
+   <body>
+      <button class="red-button" onclick="window.open('https://github.com/JMante1/Issues-for-private-repos/issues', '_blank')">Give Feedback/Report Error</button>
+      <h1>File Upload</h1>
+      
+      <form action = "/labware-uploader" method = "POST" 
+         enctype = "multipart/form-data">
+
+
+         <h3>Output Instrument</h3>
+         <input type="checkbox" id="Mantis" name="output_mantis" value="Mantis"  checked>
+         <label for="Mantis">Mantis</label><br>
+         <input type="checkbox" id="Integra" name="output_integra" value="Integra">
+         <label for="Integra">Integra</label><br>
+         <input type="checkbox" id="Tecan" name="output_tecan" value="Tecan">
+         <label for="tecan">Tecan</label><br>
+         <input type="checkbox" id="Hudson" name="output_hudson" value="Hudson">
+         <label for="Hudson">Hudson</label><br>
+
+
+         <br>
+         <h3>File to Convert</h3>
+         <p>Excel file template updated with your specific labware.
+            An example can be downloaded <a href="/public/Labware Excel Input.xlsx" target="_blank">here</a>.
+            NOTE: The program will work regardless of how many rows or columns you give it,
+            it just ignores additional rows past what fits on your plate and it will 
+            add as many reagents to dispense as you like. HOWEVER, the mantis 
+            can only actually dispense 6 at a time. IF you wish to ignore any rows 
+            or columns create a first column named "#".t column.  Then any column names starting
+            with "#" will be ignored and any rows with a "#" in the "#" column will
+            be ignored. You can try the test file to see how it works.</p>
+         <input type = "file" name = "experiment_file" accept=".xlsx, .csv"/><br>
+         <br>
+
+        
+        <input type = "submit"/><br>
+      </form>  
+
+

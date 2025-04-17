@@ -1,0 +1,45 @@
+<html>
+
+<body>
+
+<form action = "/home-submit" method = "POST"  enctype = "multipart/form-data">
+<h1>Department of Defense Acknowledgement</h1>
+This application was developed by Jeanet Mante using funds from the TBRSC SABER 02-07
+project. Any publications that contain experiments designed, carried out, or analysed
+using this application should credit this. Additionally, any UT Austin
+use should credit the co-operative agreement number: W911NF2320089.
+
+Please type your full name and lab below to acknowledge you have read an understood these terms.
+
+<br>
+<br>
+    Name: <input type="text" name="name" required><br>
+    Lab Name: <input type="text" name="lab" required>
+    <br>
+    email: <input type="text" name="email" required>
+    <br>
+<br>
+For more information feel free to reach out to: <a href="mailto:jeanet.v.mante.ctr@army.mil">jeanet.v.mante.ctr@army.mil</a> or via Github to <a href="https://github.com/JMante1/" target="_blank">JMante1</a>
+<br><br>
+<button type="button" onclick="copyToClipboard()">Copy Acknowledgement</button>
+<br><br>
+        <button type="submit" onclick="handleSubmit(event)">Submit</button>
+<br>
+
+</form>
+<script type="text/javascript">
+        // Function to copy text to clipboard
+        function copyToClipboard() {
+            const text = "Part of the work presented in this publication uses the Matching Program developed by Jeanet Mante under TBRSC SABER 02-07. It is available to affiliates of the University of Texas at Austin under co-operative agreement number: W911NF2320089."; // Text to copy
+            navigator.clipboard.writeText(text).then(() => {
+            }).catch(err => {
+                console.error("Could not copy text: ", err);
+            });
+        }
+
+        // Function to handle form submission
+        function handleSubmit(event) {
+        }
+    </script>
+</body>
+</html>
