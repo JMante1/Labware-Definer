@@ -1,4 +1,5 @@
 
+from logging import root
 import pandas as pd
 import pathlib
 import xml.etree.ElementTree as ET
@@ -53,5 +54,112 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         
         # create output file
         
-        
+import xml.etree.ElementTree as ET  
+
+def GenerateXML(fileName) : 
+
+    root = ET.Element('Plate')
+    root.attrib['xmlns:xsd'] = "http://www.w3.org/2001/XMLSchema"
+    root.attrib['xmlns:xsi'] = "http://www.w3.org/2001/XMLSchema-instance"
+    root.attrib['Version'] = "1"
+
+    data_plate = ET.Element('DataVersion') 
+    root.append (data_plate) 
+
+    name_plate = ET.Element('Name')
+    root.append(name_plate)
+
+    manu_plate = ET.Element('Manufacturer') 
+    root.append (manu_plate) 
+
+    part_plate = ET.Element('PartNumber')
+    root.append(part_plate)
+
+    description_plate = ET.Element('Description')
+    root.append(description_plate)
+
+    measure_plate = ET.Element('Measurements') 
+    measure_plate.attrib['Version'] = "0"
+    root.append (measure_plate) 
+
+    data_measure = ET.SubElement(measure_plate, 'DataVersion')
+    root.append(data_measure)
+
+    description_measure = ET.SubElement(measure_plate, 'Description') 
+    root.append (data_measure) 
+
+    length_measure = ET.SubElement(measure_plate, 'FootprintLengthMM')
+    root.append(length_measure)
+
+    width_measure = ET.SubElement(measure_plate, 'FootprintWidthMM') 
+    root.append (width_measure) 
+
+    height_measure = ET.SubElement(measure_plate, 'HeightMM')
+    root.append(height_measure)
+
+    m11 = ET.Element('Measurements') 
+    root.append (m11) 
+
+    m12 = ET.Element('Wells')
+    m12.attrib['Version'] = "0"
+    root.append(m12)
+
+    m13 = ET.SubElement(m12, 'DataVersion') 
+    root.append (m13) 
+
+    m14 = ET.SubElement(m12, 'Description')
+    root.append(m14)
+
+    m15 = ET.SubElement(m12, 'Angle') 
+    root.append (m15) 
+
+    m16 = ET.SubElement(m12, 'SectionHeightCorrection')
+    root.append(m16)
+
+    m17 = ET.SubElement(m12, 'DeltaHmax') 
+    root.append (m17) 
+
+    m18 = ET.SubElement(m12, 'ColumnCount')
+    root.append(m18)
+
+    m19 = ET.SubElement(m12, 'CollumnGap') 
+    root.append (m19) 
+
+    m20 = ET.SubElement(m12, 'Depth')
+    root.append(m20)
+
+    m21 = ET.SubElement(m12, 'NominalWellVolume') 
+    root.append (m21) 
+
+    m22 = ET.SubElement(m12, 'VShapeDepth')
+    root.append(m22)
+
+    m23 = ET.SubElement(m12, 'FirstHolePositionText') 
+    root.append (m23) 
+
+    m25 = ET.SubElement(m12, 'RowCount')
+    root.append(m25)
+
+    m26 = ET.SubElement(m12, 'RowGap') 
+    root.append (m26) 
+
+    m27 = ET.SubElement(m12, 'Shape')
+    root.append(m27)
+
+    m28 = ET.SubElement(m12, 'Size') 
+    root.append (m28) 
+
+    m29 = ET.SubElement(m12, 'Length')
+    root.append(m29)
+
+    m30 = ET.SubElement(m12, 'SizeBottom') 
+    root.append (m30) 
+
+    
+
+    tree = ET.ElementTree(root) 
+    ET.indent(tree, space="\t", level=0)
+    tree.write(fileName, encoding="utf-8")
+
 integra_file_maker(df, os.getcwd())
+GenerateXML('output2.xml')

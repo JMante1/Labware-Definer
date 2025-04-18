@@ -1,1 +1,8 @@
-<Catalog><mobile><brand>Redmi</brand><price>6999</price></mobile></Catalog>
+<Plate>
+	<DataVersion depth="1000">
+		<brand>Redmi<moreStuff />
+		</brand>
+		<price>1000</price>
+	</DataVersion>
+	<Name>stuff</Name>
+</Plate>

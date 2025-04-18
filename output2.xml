@@ -1,0 +1,56 @@
+<Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
+	<DataVersion />
+	<Name />
+	<Manufacturer />
+	<PartNumber />
+	<Description />
+	<Measurements Version="0">
+		<DataVersion />
+	<Description />
+		<FootprintLengthMM />
+	<FootprintWidthMM />
+	<HeightMM />
+	</Measurements>
+	<DataVersion />
+	<DataVersion />
+	<FootprintLengthMM />
+	<FootprintWidthMM />
+	<HeightMM />
+	<Measurements />
+	<Wells Version="0">
+		<DataVersion />
+	<Description />
+	<Angle />
+	<SectionHeightCorrection />
+	<DeltaHmax />
+	<ColumnCount />
+	<CollumnGap />
+	<Depth />
+	<NominalWellVolume />
+	<VShapeDepth />
+	<FirstHolePositionText />
+	<RowCount />
+	<RowGap />
+	<Shape />
+	<Size />
+	<Length />
+	<SizeBottom />
+</Wells>
+	<DataVersion />
+	<Description />
+	<Angle />
+	<SectionHeightCorrection />
+	<DeltaHmax />
+	<ColumnCount />
+	<CollumnGap />
+	<Depth />
+	<NominalWellVolume />
+	<VShapeDepth />
+	<FirstHolePositionText />
+	<RowCount />
+	<RowGap />
+	<Shape />
+	<Size />
+	<Length />
+	<SizeBottom />
+</Plate>
