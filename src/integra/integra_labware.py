@@ -25,17 +25,17 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         depth = row['well_max_depth_mm'] * 100
 
         if row['well_bottom_shape'] == 'Flat': 
-            shape = 'Square'
+            bottom_shape = 'Square'
         elif row['well_bottom_shape'] == 'U-Bottom':
-            shape = 'UShape'
+            bottom_shape = 'UShape'
         elif row['well_bottom_shape'] == 'V-Bottom':
-            shape = 'VShape'
+            bottom_shape = 'VShape'
             v_shape_depth = (row['well_max_depth_mm'] - row['bottom_start_depth_mm']) * 100
         else:
             raise ValueError(f"Well not 'flat', 'u-bottom', or 'v-bottom' for plate {row['plate_name']}")
             
         
-        first_hole_position_text = row['offset_left_to_a1_mm'] * 100
+        first_hole_position_text = f"{round(row['offset_left_to_a1_mm'] * 100)};{round(row['offset_top_to_a1_mm'] * 100)}"
 
         if row['well_shape'] == 'square': 
             shape = 'Square'
@@ -91,13 +91,13 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         description_measure = ET.SubElement(measure_plate, 'Description') 
       
         length_measure = ET.SubElement(measure_plate, 'FootprintLengthMM')
-        length_measure.text = str(foot_print_length_mm)
+        length_measure.text = str(round(foot_print_length_mm))
 
         width_measure = ET.SubElement(measure_plate, 'FootprintWidthMM') 
-        width_measure.text = str(foot_print_width_mm)
+        width_measure.text = str(round(foot_print_width_mm))
 
         height_measure = ET.SubElement(measure_plate, 'HeightMM')
-        height_measure.text = str(height_mm)
+        height_measure.text = str(round(height_mm))
 
         well_plate = ET.Element('Wells')
         well_plate.attrib['Version'] = "0"
@@ -118,40 +118,41 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         deltamax_well.text = str(0)
          
         bottomshape_well = ET.SubElement(well_plate, 'BottomShape')
-        bottomshape_well.text = row['well_bottom_shape']
+        bottomshape_well.text = bottom_shape
 
         columncount_well = ET.SubElement(well_plate, 'ColumnCount')
-        columncount_well.text = row['num_columns']
+        columncount_well.text = str(row['num_columns'])
         
         columngap_well = ET.SubElement(well_plate, 'ColumnGap') 
-        columncount_well.text = str(column_gap)
+        columngap_well.text = str(round(column_gap))
          
         depth_well = ET.SubElement(well_plate, 'Depth')
-        depth_well.text = str(depth)
+        depth_well.text = str(round(depth))
         
         volume_well = ET.SubElement(well_plate, 'NominalWellVolume')
-        volume_well.text = row['max_volume_ul'] 
+        volume_well.text = str(round(row['max_volume_ul']))
 
-        shapedepth_well = ET.SubElement(well_plate, 'VShapeDepth')
-        shapedepth_well.text = str(v_shape_depth)
+        if row['well_bottom_shape'] == 'V-Bottom':
+            shapedepth_well = ET.SubElement(well_plate, 'VShapeDepth')
+            shapedepth_well.text = str(round(v_shape_depth))
         
         firsthole = ET.SubElement(well_plate, 'FirstHolePositionText') 
         firsthole.text = str(first_hole_position_text)
          
         rows = ET.SubElement(well_plate, 'RowCount')
-        rows.text = row['num_rows']
+        rows.text = str(row['num_rows'])
         
         rowgap = ET.SubElement(well_plate, 'RowGap')
-        rowgap.text = str(row_gap) 
+        rowgap.text = str(round(row_gap)) 
 
         shape_well = ET.SubElement(well_plate, 'Shape')
-        shape_well.text = row['well_shape']
+        shape_well.text = shape
 
         size_well = ET.SubElement(well_plate, 'Size') 
-        size_well.text = str(size)
+        size_well.text = str(round(size))
 
         length_well = ET.SubElement(well_plate, 'Length')
-        length_well.text = str(length)
+        length_well.text = str(round(length))
         
         sizebottom_well = ET.SubElement(well_plate, 'SizeBottom') 
         sizebottom_well.text = str(0)
