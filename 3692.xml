@@ -1,17 +1,22 @@
-<?xml version='1.0' encoding='utf-8'?>
 <Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
 	<DataVersion>0</DataVersion>
-	<Name>384-well U-bottom Greiner clear</Name>
-	<Manufacturer>Greiner</Manufacturer>
-	<PartNumber>3851</PartNumber>
-	<Description>384-well U-bottom Greiner clear</Description>
+	<Name>1536-well flat-bottom Corning white</Name>
+	<Manufacturer>Corning</Manufacturer>
+	<PartNumber>3692</PartNumber>
+	<Description>1536-well flat-bottom Corning white</Description>
 	<Measurements Version="0">
-		<DataVersion>0</DataVersion>
-		<Description />
-		<FootprintLengthMM>12740.0</FootprintLengthMM>
-		<FootprintWidthMM>8518.0</FootprintWidthMM>
-		<HeightMM>1333.0</HeightMM>
+		<DataVersion />
+	<Description />
+		<FootprintLengthMM />
+	<FootprintWidthMM />
+	<HeightMM />
 	</Measurements>
+	<DataVersion />
+	<DataVersion />
+	<FootprintLengthMM />
+	<FootprintWidthMM />
+	<HeightMM />
+	<Measurements />
 	<Wells Version="0">
 		<DataVersion />
 	<Description />

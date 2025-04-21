@@ -54,112 +54,112 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         
         # create output file
         
-import xml.etree.ElementTree as ET  
 
-def GenerateXML(fileName) : 
 
-    root = ET.Element('Plate')
-    root.attrib['xmlns:xsd'] = "http://www.w3.org/2001/XMLSchema"
-    root.attrib['xmlns:xsi'] = "http://www.w3.org/2001/XMLSchema-instance"
-    root.attrib['Version'] = "1"
+        root = ET.Element('Plate')
+        root.attrib['xmlns:xsd'] = "http://www.w3.org/2001/XMLSchema"
+        root.attrib['xmlns:xsi'] = "http://www.w3.org/2001/XMLSchema-instance"
+        root.attrib['Version'] = "1"
 
-    data_plate = ET.Element('DataVersion') 
-    root.append (data_plate) 
+        data_plate = ET.Element('DataVersion') 
+        root.append (data_plate)
+        data_plate.text = str(0) 
 
-    name_plate = ET.Element('Name')
-    root.append(name_plate)
+        name_plate = ET.Element('Name')
+        root.append(name_plate)
+        name_plate.text = row['plate_name']
 
-    manu_plate = ET.Element('Manufacturer') 
-    root.append (manu_plate) 
+        manu_plate = ET.Element('Manufacturer') 
+        root.append (manu_plate)
+        manu_plate.text = row['manufacturer']
 
-    part_plate = ET.Element('PartNumber')
-    root.append(part_plate)
+        part_plate = ET.Element('PartNumber')
+        root.append(part_plate)
+        part_plate.text = str(row['catalog_number'])
 
-    description_plate = ET.Element('Description')
-    root.append(description_plate)
+        description_plate = ET.Element('Description')
+        root.append(description_plate)
+        description_plate.text = row['plate_name']
 
-    measure_plate = ET.Element('Measurements') 
-    measure_plate.attrib['Version'] = "0"
-    root.append (measure_plate) 
+        measure_plate = ET.Element('Measurements') 
+        measure_plate.attrib['Version'] = "0"
+        root.append (measure_plate) 
 
-    data_measure = ET.SubElement(measure_plate, 'DataVersion')
-    root.append(data_measure)
+        data_measure = ET.SubElement(measure_plate, 'DataVersion')
+        data_measure.text = str(0) 
 
-    description_measure = ET.SubElement(measure_plate, 'Description') 
-    root.append (data_measure) 
+        description_measure = ET.SubElement(measure_plate, 'Description') 
+      
+        length_measure = ET.SubElement(measure_plate, 'FootprintLengthMM')
+        length_measure.text = str(foot_print_length_mm)
 
-    length_measure = ET.SubElement(measure_plate, 'FootprintLengthMM')
-    root.append(length_measure)
+        width_measure = ET.SubElement(measure_plate, 'FootprintWidthMM') 
+        width_measure.text = str(foot_print_width_mm)
 
-    width_measure = ET.SubElement(measure_plate, 'FootprintWidthMM') 
-    root.append (width_measure) 
+        height_measure = ET.SubElement(measure_plate, 'HeightMM')
+        height_measure.text = str(height_mm)
 
-    height_measure = ET.SubElement(measure_plate, 'HeightMM')
-    root.append(height_measure)
+        well_plate = ET.Element('Wells')
+        well_plate.attrib['Version'] = "0"
+        root.append(well_plate)
 
-    m11 = ET.Element('Measurements') 
-    root.append (m11) 
+        data_well = ET.SubElement(well_plate, 'DataVersion') 
+        data_well.text = str(0)
 
-    m12 = ET.Element('Wells')
-    m12.attrib['Version'] = "0"
-    root.append(m12)
+        description_well = ET.SubElement(well_plate, 'Description')
+        
+        angle_well = ET.SubElement(well_plate, 'Angle')
+        angle_well.text = str(0)
+         
+        sectionheight_well = ET.SubElement(well_plate, 'SectionHeightCorrection')
+        sectionheight_well.text = str(0)
+        
+        deltamax_well = ET.SubElement(well_plate, 'DeltaHmax') 
+        deltamax_well.text = str(0)
+         
+        bottomshape_well = ET.SubElement(well_plate, 'BottomShape')
+        bottomshape_well.text = row['well_bottom_shape']
 
-    m13 = ET.SubElement(m12, 'DataVersion') 
-    root.append (m13) 
+        columncount_well = ET.SubElement(well_plate, 'ColumnCount')
+        columncount_well.text = row['num_columns']
+        
+        columngap_well = ET.SubElement(well_plate, 'ColumnGap') 
+        columncount_well.text = str(column_gap)
+         
+        depth_well = ET.SubElement(well_plate, 'Depth')
+        depth_well.text = str(depth)
+        
+        volume_well = ET.SubElement(well_plate, 'NominalWellVolume')
+        volume_well.text = row['max_volume_ul'] 
 
-    m14 = ET.SubElement(m12, 'Description')
-    root.append(m14)
+        shapedepth_well = ET.SubElement(well_plate, 'VShapeDepth')
+        shapedepth_well.text = str(v_shape_depth)
+        
+        firsthole = ET.SubElement(well_plate, 'FirstHolePositionText') 
+        firsthole.text = str(first_hole_position_text)
+         
+        rows = ET.SubElement(well_plate, 'RowCount')
+        rows.text = row['num_rows']
+        
+        rowgap = ET.SubElement(well_plate, 'RowGap')
+        rowgap.text = str(row_gap) 
 
-    m15 = ET.SubElement(m12, 'Angle') 
-    root.append (m15) 
+        shape_well = ET.SubElement(well_plate, 'Shape')
+        shape_well.text = row['well_shape']
 
-    m16 = ET.SubElement(m12, 'SectionHeightCorrection')
-    root.append(m16)
+        size_well = ET.SubElement(well_plate, 'Size') 
+        size_well.text = str(size)
 
-    m17 = ET.SubElement(m12, 'DeltaHmax') 
-    root.append (m17) 
+        length_well = ET.SubElement(well_plate, 'Length')
+        length_well.text = str(length)
+        
+        sizebottom_well = ET.SubElement(well_plate, 'SizeBottom') 
+        sizebottom_well.text = str(0)
+         
 
-    m18 = ET.SubElement(m12, 'ColumnCount')
-    root.append(m18)
-
-    m19 = ET.SubElement(m12, 'CollumnGap') 
-    root.append (m19) 
-
-    m20 = ET.SubElement(m12, 'Depth')
-    root.append(m20)
-
-    m21 = ET.SubElement(m12, 'NominalWellVolume') 
-    root.append (m21) 
-
-    m22 = ET.SubElement(m12, 'VShapeDepth')
-    root.append(m22)
-
-    m23 = ET.SubElement(m12, 'FirstHolePositionText') 
-    root.append (m23) 
-
-    m25 = ET.SubElement(m12, 'RowCount')
-    root.append(m25)
-
-    m26 = ET.SubElement(m12, 'RowGap') 
-    root.append (m26) 
-
-    m27 = ET.SubElement(m12, 'Shape')
-    root.append(m27)
-
-    m28 = ET.SubElement(m12, 'Size') 
-    root.append (m28) 
-
-    m29 = ET.SubElement(m12, 'Length')
-    root.append(m29)
-
-    m30 = ET.SubElement(m12, 'SizeBottom') 
-    root.append (m30) 
-
-    
-
-    tree = ET.ElementTree(root) 
-    ET.indent(tree, space="\t", level=0)
-    tree.write(fileName, encoding="utf-8")
+        tree = ET.ElementTree(root) 
+        ET.indent(tree, space="\t", level=0)
+        tree.write(os.path.join(output_dir, f"output2.xml"), encoding="utf-8", xml_declaration=True)
+        # tree.write(os.path.join(output_dir, f"{row['catalog_number']}.xml"), encoding="utf-8", xml_declaration=True)
 
 integra_file_maker(df, os.getcwd())
-GenerateXML('output2.xml')
