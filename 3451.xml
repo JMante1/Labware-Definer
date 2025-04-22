@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
 	<DataVersion>0</DataVersion>
 	<Name>384-well V-bottom Greiner black</Name>
@@ -5,52 +6,30 @@
 	<PartNumber>3451</PartNumber>
 	<Description>384-well V-bottom Greiner black</Description>
 	<Measurements Version="0">
-		<DataVersion />
-	<Description />
-		<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12815</FootprintLengthMM>
+		<FootprintWidthMM>8582</FootprintWidthMM>
+		<HeightMM>1493</HeightMM>
 	</Measurements>
-	<DataVersion />
-	<DataVersion />
-	<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
-	<Measurements />
 	<Wells Version="0">
-		<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
-</Wells>
-	<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>VShape</BottomShape>
+		<ColumnCount>12</ColumnCount>
+		<ColumnGap>937</ColumnGap>
+		<Depth>1140</Depth>
+		<NominalWellVolume>400</NominalWellVolume>
+		<VShapeDepth>360</VShapeDepth>
+		<FirstHolePositionText>1276;914</FirstHolePositionText>
+		<RowCount>32</RowCount>
+		<RowGap>204</RowGap>
+		<Shape>Circle</Shape>
+		<Size>456</Size>
+		<Length>593</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
 </Plate>

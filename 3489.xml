@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
 	<DataVersion>0</DataVersion>
 	<Name>1536-well V-bottom Corning clear</Name>
@@ -5,52 +6,29 @@
 	<PartNumber>3489</PartNumber>
 	<Description>1536-well V-bottom Corning clear</Description>
 	<Measurements Version="0">
-		<DataVersion />
-	<Description />
-		<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12776</FootprintLengthMM>
+		<FootprintWidthMM>8645</FootprintWidthMM>
+		<HeightMM>1311</HeightMM>
 	</Measurements>
-	<DataVersion />
-	<DataVersion />
-	<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
-	<Measurements />
 	<Wells Version="0">
-		<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
-</Wells>
-	<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>UShape</BottomShape>
+		<ColumnCount>48</ColumnCount>
+		<ColumnGap>218</ColumnGap>
+		<Depth>1160</Depth>
+		<NominalWellVolume>80</NominalWellVolume>
+		<FirstHolePositionText>1258;1181</FirstHolePositionText>
+		<RowCount>32</RowCount>
+		<RowGap>205</RowGap>
+		<Shape>Circle</Shape>
+		<Size>527</Size>
+		<Length>574</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
 </Plate>

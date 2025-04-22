@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
 	<DataVersion>0</DataVersion>
 	<Name>384-well U-bottom Nunc white</Name>
@@ -5,52 +6,29 @@
 	<PartNumber>3403</PartNumber>
 	<Description>384-well U-bottom Nunc white</Description>
 	<Measurements Version="0">
-		<DataVersion />
-	<Description />
-		<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12776</FootprintLengthMM>
+		<FootprintWidthMM>8527</FootprintWidthMM>
+		<HeightMM>1500</HeightMM>
 	</Measurements>
-	<DataVersion />
-	<DataVersion />
-	<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
-	<Measurements />
 	<Wells Version="0">
-		<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
-</Wells>
-	<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>UShape</BottomShape>
+		<ColumnCount>48</ColumnCount>
+		<ColumnGap>210</ColumnGap>
+		<Depth>1110</Depth>
+		<NominalWellVolume>360</NominalWellVolume>
+		<FirstHolePositionText>1401;1195</FirstHolePositionText>
+		<RowCount>8</RowCount>
+		<RowGap>855</RowGap>
+		<Shape>Circle</Shape>
+		<Size>648</Size>
+		<Length>452</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
 </Plate>

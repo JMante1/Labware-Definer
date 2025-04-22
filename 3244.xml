@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
 	<DataVersion>0</DataVersion>
 	<Name>96-well U-bottom ThermoFisher clear</Name>
@@ -5,52 +6,30 @@
 	<PartNumber>3244</PartNumber>
 	<Description>96-well U-bottom ThermoFisher clear</Description>
 	<Measurements Version="0">
-		<DataVersion />
-	<Description />
-		<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12802</FootprintLengthMM>
+		<FootprintWidthMM>8654</FootprintWidthMM>
+		<HeightMM>1455</HeightMM>
 	</Measurements>
-	<DataVersion />
-	<DataVersion />
-	<FootprintLengthMM />
-	<FootprintWidthMM />
-	<HeightMM />
-	<Measurements />
 	<Wells Version="0">
-		<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
-</Wells>
-	<DataVersion />
-	<Description />
-	<Angle />
-	<SectionHeightCorrection />
-	<DeltaHmax />
-	<ColumnCount />
-	<CollumnGap />
-	<Depth />
-	<NominalWellVolume />
-	<VShapeDepth />
-	<FirstHolePositionText />
-	<RowCount />
-	<RowGap />
-	<Shape />
-	<Size />
-	<Length />
-	<SizeBottom />
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>VShape</BottomShape>
+		<ColumnCount>24</ColumnCount>
+		<ColumnGap>447</ColumnGap>
+		<Depth>1010</Depth>
+		<NominalWellVolume>400</NominalWellVolume>
+		<VShapeDepth>240</VShapeDepth>
+		<FirstHolePositionText>1397;1060</FirstHolePositionText>
+		<RowCount>16</RowCount>
+		<RowGap>427</RowGap>
+		<Shape>Square</Shape>
+		<Size>388</Size>
+		<Length>575</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
 </Plate>

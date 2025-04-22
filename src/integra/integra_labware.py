@@ -160,7 +160,7 @@ def integra_file_maker(plate_dimensions_df, output_dir):
 
         tree = ET.ElementTree(root) 
         ET.indent(tree, space="\t", level=0)
-        tree.write(os.path.join(output_dir, f"output2.xml"), encoding="utf-8", xml_declaration=True)
-        # tree.write(os.path.join(output_dir, f"{row['catalog_number']}.xml"), encoding="utf-8", xml_declaration=True)
+        # tree.write(os.path.join(output_dir, f"output2.xml"), encoding="utf-8", xml_declaration=True)
+        tree.write(os.path.join(output_dir, f"{row['catalog_number']}.xml"), encoding="utf-8", xml_declaration=True)
 
 integra_file_maker(df, os.getcwd())
