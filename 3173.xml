@@ -24,7 +24,7 @@
 		<Depth>1060</Depth>
 		<NominalWellVolume>11200</NominalWellVolume>
 		<VShapeDepth>150</VShapeDepth>
-		<FirstHolePositionText>1313;1022</FirstHolePositionText>
+		<FirstHolePositionText>1733;1483</FirstHolePositionText>
 		<RowCount>32</RowCount>
 		<RowGap>210</RowGap>
 		<Shape>Circle</Shape>
