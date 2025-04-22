@@ -120,17 +120,17 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         bottomshape_well = ET.SubElement(well_plate, 'BottomShape')
         bottomshape_well.text = bottom_shape
 
-        columncount_well = ET.SubElement(well_plate, 'ColumnCount')
+        columncount_well = ET.SubElement(well_plate, 'CollumnCount')
         columncount_well.text = str(row['num_columns'])
         
-        columngap_well = ET.SubElement(well_plate, 'ColumnGap') 
+        columngap_well = ET.SubElement(well_plate, 'CollumnGap') 
         columngap_well.text = str(round(column_gap))
          
         depth_well = ET.SubElement(well_plate, 'Depth')
         depth_well.text = str(round(depth))
         
         volume_well = ET.SubElement(well_plate, 'NominalWellVolume')
-        volume_well.text = str(round(row['max_volume_ul']))
+        volume_well.text = str(round(row['max_volume_ul'] * 100))
 
         if row['well_bottom_shape'] == 'V-Bottom':
             shapedepth_well = ET.SubElement(well_plate, 'VShapeDepth')

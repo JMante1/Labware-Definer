@@ -19,10 +19,10 @@
 		<SectionHeightCorrection>0</SectionHeightCorrection>
 		<DeltaHmax>0</DeltaHmax>
 		<BottomShape>Square</BottomShape>
-		<ColumnCount>12</ColumnCount>
-		<ColumnGap>941</ColumnGap>
+		<CollumnCount>12</CollumnCount>
+		<CollumnGap>941</CollumnGap>
 		<Depth>1070</Depth>
-		<NominalWellVolume>360</NominalWellVolume>
+		<NominalWellVolume>36000</NominalWellVolume>
 		<FirstHolePositionText>1259;1085</FirstHolePositionText>
 		<RowCount>16</RowCount>
 		<RowGap>411</RowGap>
