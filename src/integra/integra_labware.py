@@ -35,7 +35,7 @@ def integra_file_maker(plate_dimensions_df, output_dir):
             raise ValueError(f"Well not 'flat', 'u-bottom', or 'v-bottom' for plate {row['plate_name']}")
             
         
-        first_hole_position_text = f"{round((row['offset_left_to_a1_mm']+ row['well_length_mm']) * 100)};{round((row['offset_top_to_a1_mm'] + row['well_width_mm'])* 100)}"
+        first_hole_position_text = f"{round((row['offset_left_to_a1_mm']+ row['well_length_mm'] / 2) * 100)};{round((row['offset_top_to_a1_mm'] + row['well_width_mm'] / 2)* 100)}"
 
         if row['well_shape'] == 'square': 
             shape = 'Square'
