@@ -27,18 +27,18 @@ def integra_file_maker(plate_dimensions_df, output_dir):
         'circular': 'Circle'
     }
 
-    for index, row in plate_dimensions_df.iterrows():
+    for _, row in plate_dimensions_df.iterrows():
         mm_to_um = lambda x: x * 100
         round_mm = lambda x: round(x * 100)
 
         # Preprocess values
         bottom_shape = bottom_shape_map.get(row['well_bottom_shape'])
         if not bottom_shape:
-            raise ValueError(f"Invalid well bottom shape for plate {row['plate_name']}: {row['well_bottom_shape']} 'flat', 'u-bottom', or 'v-bottom'")
+            raise ValueError(f"Invalid well bottom shape for plate {row['plate_name']}: {row['well_bottom_shape']} please use 'Flat', 'U-Bottom', or 'V-Bottom'")
 
         shape = well_shape_map.get(row['well_shape'])
         if not shape:
-            raise ValueError(f"Invalid well shape for plate {row['plate_name']}: {row['well_shape']} 'square' or 'circular'")
+            raise ValueError(f"Invalid well shape for plate {row['plate_name']}: {row['well_shape']} please use 'square' or 'circular'")
 
         if bottom_shape == 'VShape':
             v_shape_depth = round_mm(row['well_max_depth_mm'] - row['bottom_start_depth_mm'])
