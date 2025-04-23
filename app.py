@@ -11,6 +11,7 @@ import sys
 import traceback
 import pandas as pd
 import src.mantis.mantis_labware as ml
+import src.integra.integra_labware as il
 import tempfile
 from datetime import datetime
 import os
@@ -120,8 +121,7 @@ def upload_labware_file():
                     else:
                         os.makedirs(os.path.join(temp_dir, 'Integra'))
                         output_folder = os.path.join(temp_dir, 'Integra')
-                    with open(os.path.join(output_folder, "test.txt"), 'w+') as f:
-                        f.write("Hello World")
+                    il.integra_file_maker(df, output_folder)
 
                 with tempfile.TemporaryDirectory() as zip_temp_dir:
                     # Zip the processed files
