@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
+	<DataVersion>0</DataVersion>
+	<Name>384-well U-bottom Nunc white</Name>
+	<Manufacturer>Nunc</Manufacturer>
+	<PartNumber>3403</PartNumber>
+	<Description>384-well U-bottom Nunc white</Description>
+	<Measurements Version="0">
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12776</FootprintLengthMM>
+		<FootprintWidthMM>8527</FootprintWidthMM>
+		<HeightMM>1500</HeightMM>
+	</Measurements>
+	<Wells Version="0">
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>UShape</BottomShape>
+		<CollumnCount>48</CollumnCount>
+		<CollumnGap>210</CollumnGap>
+		<Depth>1110</Depth>
+		<NominalWellVolume>36000</NominalWellVolume>
+		<FirstHolePositionText>1725;1421</FirstHolePositionText>
+		<RowCount>8</RowCount>
+		<RowGap>855</RowGap>
+		<Shape>Circle</Shape>
+		<Size>648</Size>
+		<Length>452</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
+</Plate>

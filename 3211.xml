@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
+	<DataVersion>0</DataVersion>
+	<Name>1536-well V-bottom Corning white</Name>
+	<Manufacturer>Corning</Manufacturer>
+	<PartNumber>3211</PartNumber>
+	<Description>1536-well V-bottom Corning white</Description>
+	<Measurements Version="0">
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12762</FootprintLengthMM>
+		<FootprintWidthMM>8519</FootprintWidthMM>
+		<HeightMM>1303</HeightMM>
+	</Measurements>
+	<Wells Version="0">
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>UShape</BottomShape>
+		<CollumnCount>12</CollumnCount>
+		<CollumnGap>910</CollumnGap>
+		<Depth>1030</Depth>
+		<NominalWellVolume>8000</NominalWellVolume>
+		<FirstHolePositionText>1651;1188</FirstHolePositionText>
+		<RowCount>32</RowCount>
+		<RowGap>201</RowGap>
+		<Shape>Square</Shape>
+		<Size>514</Size>
+		<Length>561</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
+</Plate>

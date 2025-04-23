@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Plate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
+	<DataVersion>0</DataVersion>
+	<Name>384-well U-bottom Corning clear</Name>
+	<Manufacturer>Corning</Manufacturer>
+	<PartNumber>3243</PartNumber>
+	<Description>384-well U-bottom Corning clear</Description>
+	<Measurements Version="0">
+		<DataVersion>0</DataVersion>
+		<Description />
+		<FootprintLengthMM>12897</FootprintLengthMM>
+		<FootprintWidthMM>8668</FootprintWidthMM>
+		<HeightMM>1540</HeightMM>
+	</Measurements>
+	<Wells Version="0">
+		<DataVersion>0</DataVersion>
+		<Description />
+		<Angle>0</Angle>
+		<SectionHeightCorrection>0</SectionHeightCorrection>
+		<DeltaHmax>0</DeltaHmax>
+		<BottomShape>VShape</BottomShape>
+		<CollumnCount>12</CollumnCount>
+		<CollumnGap>935</CollumnGap>
+		<Depth>1190</Depth>
+		<NominalWellVolume>36000</NominalWellVolume>
+		<VShapeDepth>460</VShapeDepth>
+		<FirstHolePositionText>1630;1226</FirstHolePositionText>
+		<RowCount>32</RowCount>
+		<RowGap>207</RowGap>
+		<Shape>Circle</Shape>
+		<Size>557</Size>
+		<Length>567</Length>
+		<SizeBottom>0</SizeBottom>
+	</Wells>
+</Plate>
