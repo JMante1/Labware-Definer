@@ -91,7 +91,8 @@ def upload_labware_file():
         try:
             if request.files["experiment_file"].getbuffer().nbytes > 0:
                 file_name = request.files["experiment_file"].filename.split(".")[0]
-                df = pd.read_excel(request.files["experiment_file"], skiprows=1)
+                df = pd.read_excel(request.files["experiment_file"], skiprows=1, comment='#')
+                df = df.dropna()
             else:
                 return "No File submitted", 404
 
