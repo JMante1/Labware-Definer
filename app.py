@@ -12,6 +12,7 @@ import traceback
 import pandas as pd
 import src.mantis.mantis_labware as ml
 import src.integra.integra_labware as il
+import src.tecan.tecan_labware as tl
 import tempfile
 from datetime import datetime
 import os
@@ -124,6 +125,14 @@ def upload_labware_file():
                         os.makedirs(os.path.join(temp_dir, 'Integra'))
                         output_folder = os.path.join(temp_dir, 'Integra')
                     il.integra_file_maker(df, output_folder)
+
+                if 'output_tecan' in request.form:
+                    if num_instruments == 1:
+                        output_folder = temp_dir
+                    else:
+                        os.makedirs(os.path.join(temp_dir, 'Tecan'))
+                        output_folder = os.path.join(temp_dir, 'Tecan')
+                    tl.generate_tecan_files(df, output_folder) 
 
                 with tempfile.TemporaryDirectory() as zip_temp_dir:
                     # Zip the processed files
