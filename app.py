@@ -22,7 +22,6 @@ import zipfile
 
 app = Flask(__name__)
 
-
 @app.route("/status")
 def status():
     return "The Server is running"

@@ -19,7 +19,7 @@ pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesse
 tecan_dir = os.path.dirname(os.path.abspath(__file__))
 screenshots_dir = os.path.join(tecan_dir, "screenshots")
 # results_dir = os.path.join(tecan_dir, "results")
-pyautogui.PAUSE = 0.5  
+pyautogui.PAUSE = 0.5
 
 class WindowMgr:
     """Encapsulates some calls to the winapi for window management"""
@@ -118,7 +118,9 @@ def click_word_on_screen(
 
     # convert to text data
     data = pytesseract.image_to_data(scrnshot, output_type=pytesseract.Output.DICT)
-    data_i = pytesseract.image_to_data(screenshot_inv, output_type=pytesseract.Output.DICT)
+    data_i = pytesseract.image_to_data(screenshot_inv, output_type=pytesseract.Output.DICT)\
+    
+    print(data)
 
     if len(find_word.split()) == 1:
         # check matches in normal image (black text)
@@ -267,6 +269,7 @@ def generate_tecan_files(df, output_folder):
     w = WindowMgr()
     w.find_window_wildcard("FluentControl")
     w.set_foreground() 
+
     click_word_on_screen('Labware', expected_match_num=1)
     click_word_on_screen('microplate', expected_match_num=1)
     for i, row in df.iterrows():
@@ -310,7 +313,7 @@ def generate_tecan_files(df, output_folder):
         pyautogui.press('down', presses=2)
         pyautogui.press('enter')
         # click_word_on_screen('Duplicate 96 Well Flat', expected_match_num=1) # could change to do this with
-                            
+
         # 30 second delay   
         time.sleep(10)
 
@@ -335,7 +338,7 @@ def generate_tecan_files(df, output_folder):
         # cv2.destroyAllWindows()
 
         # give it time to move
-        time.sleep(2)
+        time.sleep(2) 
 
         match = match_image_regardless_of_sz('carrier part larger.PNG', screenshots_dir)
         # -15 as match is to right edge and want to be more central

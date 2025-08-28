@@ -1,1 +1,4 @@
 This program takes excel files and turns them into labware defintions for the mantis
+
+
+Make sure that for  running the TECAN one, the window is fullscreen. You should be on the screen with the "Category" where you see Labware as an option. Make sure that the Labware option is not highlighted white; it is highlighted white when it was clicked previously, so if you click  on a different option and go back to the "Category" screen, the "Labware" option will not be highlighted white. This breaks the OCR if its highlighted. Also make sure "Microplate" (which shows up after you click "Labware") is also not highlighted white.
